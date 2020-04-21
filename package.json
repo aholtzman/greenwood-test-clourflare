@@ -1,0 +1,33 @@
+{
+  "name": "greenwood-getting-started",
+  "version": "1.0.0",
+  "description": "Repository for Greenwood's getting started guide",
+  "scripts": {
+    "build": "greenwood build",
+    "develop": "greenwood develop",
+    "start": "npm run develop",
+    "serve": "rimraf ./public && npm run build && ws -d ./public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thescientist13/greenwood-getting-started.git"
+  },
+  "keywords": [
+    "Greenwood"
+  ],
+  "author": "Owen Buckley <owen@thegreenhouse.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thescientist13/greenwood-getting-started/issues"
+  },
+  "homepage": "https://github.com/thescientist13/greenwood-getting-started#readme",
+  "dependencies": {
+    "@cloudflare/wrangler": "^1.8.4",
+    "@evergreen-wc/eve-container": "0.0.9",
+    "global": "^4.4.0"
+  },
+  "devDependencies": {
+    "@greenwood/cli": "^0.4.2",
+    "eslint": "^6.1.0"
+  }
+}
