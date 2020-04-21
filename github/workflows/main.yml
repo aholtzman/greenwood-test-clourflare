@@ -23,4 +23,4 @@ jobs:
         with:
            apiKey: ${{ secrets.CF_WORKERS_KEY }}
            email: ${{ secrets.CF_WORKERS_EMAIL }}
-           environment: "production"
+           environment: "production"s
