@@ -10,6 +10,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: Navigate to repo
         run: cd $GITHUB_WORKSPACE
+      - name: Install Chromium Library Dependencies
+        run: |
+         sh ./.github/workflows/chromium-lib-install.sh
       - uses: actions/setup-node@v1
         with:
           node-version: "10.x"
