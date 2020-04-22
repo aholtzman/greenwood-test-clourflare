@@ -8,10 +8,6 @@
     "start": "npm run develop",
     "serve": "rimraf ./public && npm run build && ws -d ./public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thescientist13/greenwood-getting-started.git"
-  },
   "keywords": [
     "Greenwood"
   ],
