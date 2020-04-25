@@ -28,8 +28,8 @@ jobs:
             - project/build
       - attach_workspace:
           at: ~/
+      - uses: opspresso/action-s3-sync@master
       - name: Publish to AWS S3
-        uses: opspresso/action-s3-sync@master
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
