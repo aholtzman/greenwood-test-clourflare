@@ -29,5 +29,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-2"
           FROM_PATH: "./public"
-          DEST_PATH: "s3://adh-greenwood-demo/?region=us-east-2"
+          DEST_PATH: "s3://adh-greenwood-demo"
           OPTIONS: "--acl public-read"
