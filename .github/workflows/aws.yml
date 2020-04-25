@@ -22,17 +22,12 @@ jobs:
         run: npm install
       - name: Build docs
         run: npm run build
-      - persist_to_workspace:
-          root: ~/
-          paths:
-            - project/build
-      - attach_workspace:
-          at: ~/
+      - name: Publish to AWS S3
         uses: opspresso/action-s3-sync@master
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "us-east-1"
+          AWS_REGION: "us-east-2"
           FROM_PATH: "./target/publish"
           DEST_PATH: "s3://adh-greenwood-demo/?region=us-east-2"
           OPTIONS: "--acl public-read"
