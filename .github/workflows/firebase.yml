@@ -22,4 +22,5 @@ jobs:
     - name: Firebase Deploy
       run: |
         sudo npm install -g firebase-tools
+        firebase use default
         firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
