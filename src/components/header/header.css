@@ -2,7 +2,7 @@
   grid-area: header;
 
   & .header {
-    background-color: red;
+    background-color: blue;
     min-height: 30px;
     padding: 10px;
     font-size: 1.2rem;
